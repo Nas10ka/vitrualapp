@@ -5,7 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 </head>
+<script>
+  const showModal = (size) => () => {
+    console.log('Size: ', size);
+    window.parent.postMessage({ clientId: "GS0vOlzBlrf5gLwu6UZVISaDH60YJLZC", type: "appExtOpenModal", payload: { url: "https://panicstudio.tv/en", size } }, "*");
+  }
+</script>
 <body>
   Bizzabo App
+  <button onclick="showModal('sm')">sm</button>
+  <button onclick="showModal('md')">md</button>
+  <button onclick="showModal('lg')">lg</button>
+  <button onclick="showModal('xl')">xl</button>
+  <button onclick="showModal('max')">max</button>
 </body>
 </html>
